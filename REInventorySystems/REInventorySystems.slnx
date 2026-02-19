@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="REInventorySystems/REInventorySystems.vcxproj" Id="bb5b6dbb-213f-41fb-bc94-fa6bf077f2b9" />
+</Solution>
