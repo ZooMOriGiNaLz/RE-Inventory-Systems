@@ -1,25 +1,34 @@
 #include "raylib.h"
+#include "RE4Inventory.h"
 
 int main(void)
 {
+    // START
     const int screenWidth = 800;
-    const int screenHeight = 450;
-
-    InitWindow(screenWidth, screenHeight, "raylib [core] example - basic window");
-
+    const int screenHeight = 800;
+    InitWindow(screenWidth, screenHeight, "Resident Evil Inventory Systems");
     SetTargetFPS(60);
+
+	// Create inventory object here.
+    RE4Inventory* re4Inventory = new RE4Inventory();
+
+	re4Inventory->SetPosition(100, 200);
 
     while (!WindowShouldClose())
     {
+        // UPDATE
+
+        // RENDER
         BeginDrawing();
+        ClearBackground(GRAY);
 
-        ClearBackground(RAYWHITE);
-
-        DrawText("Congrats! You created your first window!", 190, 200, 20, LIGHTGRAY);
+		re4Inventory->Render();
 
         EndDrawing();
     }
     CloseWindow();
+
+	delete re4Inventory;
 
     return 0;
 }
